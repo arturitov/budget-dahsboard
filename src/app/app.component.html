@@ -1,0 +1,19 @@
+<form [formGroup]="categoryForm" (submit)="submit()">
+
+  <label for="name">Name: </label>
+  <input id="name" formControlName="name" type="text">
+
+  <label for="budget">Monthly budget: </label>
+  <input id="budget" formControlName="budget" type="number">
+
+  <label for="tag">Tag: </label>
+  <input id="tag" formControlName="tag" type="text">
+
+  <button class="button" type="submit">Add Category</button>
+
+</form>
+
+<h2>Categories</h2>
+
+<div *ngFor="let category of categories | async">
+</div>
